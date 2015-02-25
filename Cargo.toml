@@ -1,0 +1,28 @@
+[package]
+
+name = "collections"
+version = "0.0.1"
+authors = ["The Rust Project Developers"]
+
+license = "MIT/Apache-2.0"
+repository = "https://github.com/RustyGecko/rust-collections"
+homepage = "http://doc.rust-lang.org/nightly/collections/"
+description = """
+collections as a stand-alone crate
+"""
+
+[lib]
+name = "collections"
+path = "rust/src/libcollections/lib.rs"
+
+[target.thumbv7m-none-eabi.dependencies.core]
+git = "https://github.com/sondrele/rust-libcore.git"
+
+[target.thumbv7m-none-eabi.dependencies.libc]
+git = "https://github.com/RustyGecko/rust-libc.git"
+
+[target.thumbv7m-none-eabi.dependencies.unicode]
+git = "https://github.com/sondrele/rust-unicode.git"
+
+[target.thumbv7m-none-eabi.dependencies.alloc]
+git = "https://github.com/sondrele/rust-alloc.git"
