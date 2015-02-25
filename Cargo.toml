@@ -22,7 +22,7 @@ git = "https://github.com/sondrele/rust-libcore.git"
 git = "https://github.com/RustyGecko/rust-libc.git"
 
 [target.thumbv7m-none-eabi.dependencies.unicode]
-git = "https://github.com/sondrele/rust-unicode.git"
+git = "https://github.com/RustyGecko/rust-unicode.git"
 
 [target.thumbv7m-none-eabi.dependencies.alloc]
-git = "https://github.com/sondrele/rust-alloc.git"
+git = "https://github.com/RustyGecko/rust-alloc.git"
