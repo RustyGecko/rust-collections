@@ -11,18 +11,26 @@ description = """
 collections as a stand-alone crate
 """
 
+build = "build.rs"
+
 [lib]
 name = "collections"
 path = "rust/src/libcollections/lib.rs"
 
+[build-dependencies.rust_src]
+git = "https://github.com/sondrele/rust-src.git"
+
 [target.thumbv7m-none-eabi.dependencies.core]
-git = "https://github.com/sondrele/rust-libcore.git"
+git = "https://github.com/RustyGecko/rust-core.git"
 
 [target.thumbv7m-none-eabi.dependencies.libc]
 git = "https://github.com/RustyGecko/rust-libc.git"
+rev = "8d31dd718a43b67b439b9e7dda4dc9bafb56b310"
 
 [target.thumbv7m-none-eabi.dependencies.unicode]
 git = "https://github.com/RustyGecko/rust-unicode.git"
+rev = "31e2ceafb6872d9ec101fc269a2752acd1534c74"
 
 [target.thumbv7m-none-eabi.dependencies.alloc]
 git = "https://github.com/RustyGecko/rust-alloc.git"
+rev = "754d96986c855adb96ded7e291b4b07be2b59336"
