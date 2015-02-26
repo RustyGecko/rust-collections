@@ -11,12 +11,17 @@ description = """
 collections as a stand-alone crate
 """
 
+build = "build.rs"
+
 [lib]
 name = "collections"
 path = "rust/src/libcollections/lib.rs"
 
+[build-dependencies.rust_src]
+git = "https://github.com/sondrele/rust-src.git"
+
 [target.thumbv7m-none-eabi.dependencies.core]
-git = "https://github.com/sondrele/rust-libcore.git"
+git = "https://github.com/RustyGecko/rust-core.git"
 
 [target.thumbv7m-none-eabi.dependencies.libc]
 git = "https://github.com/RustyGecko/rust-libc.git"
